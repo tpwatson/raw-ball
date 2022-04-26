@@ -2,7 +2,21 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="monetization" content="$ilp.uphold.com/EGjqL4EfKkKa">
+    <style>
+      .hidden {
+        display: none;
+      }
+    </style>
+      <script>
+        if (document.monetization) {
+          document.monetization.addEventListener('monetizationstart', () => {
+            document.getElementById('exclusive').classList.remove('hidden')
+          })
+        }
+      </script>
   </head>
   <body>
+    <div id="exclusive" class="hidden">Here's some exclusive content!</div>
   <script type="text/javascript" src="bundle.min.js"></script></body>
 </html>
