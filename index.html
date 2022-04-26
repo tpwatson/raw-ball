@@ -12,11 +12,12 @@
         if (document.monetization) {
           document.monetization.addEventListener('monetizationstart', () => {
             document.getElementById('exclusive').classList.remove('hidden')
+            localStorage.setItem("yesMonetized", "addSparkles")
           })
         }
       </script>
   </head>
   <body>
-    <div id="exclusive" class="hidden">Here's some exclusive content!</div>
+    <div id="exclusive" class="hidden">Thanks for supporting! Sparkly particles added!</div>
   <script type="text/javascript" src="bundle.min.js"></script></body>
 </html>
